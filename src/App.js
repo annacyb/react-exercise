@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 import Nav from "./components/Nav";
@@ -10,7 +9,7 @@ function App() {
         id: 1143,
         productdisplayname: "Round Neck Jersey",
         price: 432,
-        soldOut: 0,
+        soldOut: 1,
     };
     let basket = ["Sth", "Sth2"];
 

@@ -26,20 +26,21 @@ function Nav() {
 function ProductList() {
     return (
         <section className="ProductList">
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
+            <Product title="Bike" />
+            <Product title="Car" />
+            <Product title="Shoes" />
+            <Product title="Bag" />
+            <Product title="Pencil" />
+            <Product title="Rabbit" />
         </section>
     );
 }
 
-function Product() {
+function Product(props) {
+    // console.log(props);
     return (
         <article className="Product">
-            <h2>Product 1</h2>
+            <h2>{props.title}</h2>
             <p>Lorem ipsum</p>
         </article>
     );
@@ -57,9 +58,10 @@ function MyBasket() {
 
 function CheckoutForm() {
     return (
-        <form className="CheckoutForm">
-            <p>Checkout Form here</p>
-        </form>
+        <>
+            <h2>Checkout form</h2>
+            <form className="CheckoutForm"></form>
+        </>
     );
 }
 

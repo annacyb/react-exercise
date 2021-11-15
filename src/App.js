@@ -2,12 +2,20 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+    const product = {
+        id: 1143,
+        productdisplayname: "Round Neck Jersey",
+        price: 432,
+        soldOut: 0,
+    };
+    let basket = ["Sth", "Sth2"];
+
     return (
         <div className="App">
             <Nav />
             <div className="BottomElements">
-                <ProductList />
-                <Basket />
+                <ProductList product={product} />
+                <Basket basket={basket} />
             </div>
         </div>
     );
@@ -23,15 +31,15 @@ function Nav() {
     );
 }
 
-function ProductList() {
+function ProductList(props) {
     return (
         <section className="ProductList">
-            <Product title="Bike" />
-            <Product title="Car" />
-            <Product title="Shoes" />
-            <Product title="Bag" />
-            <Product title="Pencil" />
-            <Product title="Rabbit" />
+            <Product {...props.product} />
+            <Product {...props.product} />
+            <Product {...props.product} />
+            <Product {...props.product} />
+            <Product {...props.product} />
+            <Product {...props.product} />
         </section>
     );
 }
@@ -40,17 +48,27 @@ function Product(props) {
     // console.log(props);
     return (
         <article className="Product">
-            <h2>{props.title}</h2>
-            <p>Lorem ipsum</p>
+            <h2>{props.productdisplayname}</h2>
+            <p>ID: {props.id}</p>
+            <p>Price: {props.price}</p>
         </article>
     );
 }
 
-function MyBasket() {
+function Basket(props) {
+    return (
+        <section className="Basket">
+            <MyBasket basket={props.basket} />
+            <CheckoutForm />
+        </section>
+    );
+}
+
+function MyBasket(props) {
     return (
         <article className="MyBasket">
             <h2>Basket</h2>
-            <p>3 items</p>
+            <p>{props.basket.length} items</p>
             <p>420$</p>
         </article>
     );
@@ -62,15 +80,6 @@ function CheckoutForm() {
             <h2>Checkout form</h2>
             <form className="CheckoutForm"></form>
         </>
-    );
-}
-
-function Basket() {
-    return (
-        <section className="Basket">
-            <MyBasket />
-            <CheckoutForm />
-        </section>
     );
 }
 

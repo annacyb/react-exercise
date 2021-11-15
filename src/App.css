@@ -1,77 +1,38 @@
-.App {
-    text-align: center;
-}
-
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* My CSS */
-
-.navigation {
+.Navigation {
     background-color: pink;
     height: 50px;
 }
 
-.bottomElements {
+.BottomElements {
     border: 1px black solid;
     height: auto;
     display: flex;
     flex-direction: row;
 }
 
-.productList {
+.ProductList {
     background-color: aquamarine;
-    height: 300px;
+    height: auto;
     width: 75%;
     display: flex;
     flex-direction: row;
-    row-gap: 15px;
-    column-gap: 15px;
+    row-gap: 1%;
+    column-gap: 1%;
     flex-flow: wrap;
 }
 
-.basket {
+.Basket {
     background-color: yellow;
-    height: 300px;
+    height: auto;
     width: 25%;
+    padding: 1%;
 }
 
-.product {
-    height: 100px;
-    width: 30%;
+.Product {
+    height: auto;
+    width: 27%;
     background-color: white;
-    margin-top: 15px;
-    margin-left: 15px;
+    margin-top: 1%;
+    margin-left: 1%;
+    padding: 2%;
 }

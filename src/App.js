@@ -3,44 +3,52 @@ import "./App.css";
 
 function App() {
     return (
-        <>
-            <nav className="navigation">
-                <a href="#/">HTML</a>
-                <a href="#/">CSS</a>
-                <a href="#/">JavaScript</a>
+        <div className="App">
+            <nav className="Navigation">
+                <a href="#/">Home</a>
+                <a href="#/">Link 2</a>
+                <a href="#/">Link 3</a>
             </nav>
-            <div className="bottomElements">
-                <section className="productList">
-                    <article className="product">
-                        <div className="productDetails"></div>
+            <div className="BottomElements">
+                <section className="ProductList">
+                    <article className="Product">
+                        <h2>Product 1</h2>
+                        <p>Lorem ipsum</p>
                     </article>
-                    <article className="product">
-                        <div className="productDetails"></div>
+                    <article className="Product">
+                        <h2>Product 1</h2>
+                        <p>Lorem ipsum</p>
                     </article>
-                    <article className="product">
-                        <div className="productDetails"></div>
+                    <article className="Product">
+                        <h2>Product 1</h2>
+                        <p>Lorem ipsum</p>
                     </article>
-                    <article className="product">
-                        <div className="productDetails"></div>
+                    <article className="Product">
+                        <h2>Product 1</h2>
+                        <p>Lorem ipsum</p>
                     </article>
-                    <article className="product">
-                        <div className="productDetails"></div>
+                    <article className="Product">
+                        <h2>Product 1</h2>
+                        <p>Lorem ipsum</p>
                     </article>
-                    <article className="product">
-                        <div className="productDetails"></div>
+                    <article className="Product">
+                        <h2>Product 1</h2>
+                        <p>Lorem ipsum</p>
                     </article>
                 </section>
 
-                <section className="basket">
-                    <article className="myBasket">
-                        <p>Basket here</p>
+                <section className="Basket">
+                    <article className="MyBasket">
+                        <h2>Basket</h2>
+                        <p>3 items</p>
+                        <p>420$</p>
                     </article>
-                    <article className="checkoutForm">
+                    <form className="CheckoutForm">
                         <p>Checkout Form here</p>
-                    </article>
+                    </form>
                 </section>
             </div>
-        </>
+        </div>
     );
 }
 

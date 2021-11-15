@@ -6,19 +6,8 @@ function App() {
         <div className="App">
             <Nav />
             <div className="BottomElements">
-                <section className="ProductList">
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                </section>
-
-                <section className="Basket">
-                    <MyBasket />
-                    <CheckoutForm />
-                </section>
+                <ProductList />
+                <Basket />
             </div>
         </div>
     );
@@ -31,6 +20,19 @@ function Nav() {
             <a href="#/">Link 2</a>
             <a href="#/">Link 3</a>
         </nav>
+    );
+}
+
+function ProductList() {
+    return (
+        <section className="ProductList">
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+        </section>
     );
 }
 
@@ -58,6 +60,15 @@ function CheckoutForm() {
         <form className="CheckoutForm">
             <p>Checkout Form here</p>
         </form>
+    );
+}
+
+function Basket() {
+    return (
+        <section className="Basket">
+            <MyBasket />
+            <CheckoutForm />
+        </section>
     );
 }
 

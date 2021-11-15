@@ -24,7 +24,13 @@ p {
 .Navigation {
     background-color: white;
     height: 50px;
-    border: 1px rgb(104, 104, 104) solid;
+    border-bottom: 1px rgb(104, 104, 104) solid;
+    border-right: 1px rgb(104, 104, 104) solid;
+    border-left: 1px rgb(104, 104, 104) solid;
+    display: flex;
+    column-gap: auto;
+    justify-content: space-around;
+    padding-top: 20px;
 }
 
 .BottomElements {

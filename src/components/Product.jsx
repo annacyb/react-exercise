@@ -3,7 +3,8 @@ export default function Product(props) {
 
     const styles = {
         // if true then green if false red
-        backgroundColor: props.soldOut ? "green" : "red"
+        // backgroundColor: props.soldOut ? "green" : "red",
+        border: props.soldOut ? "green 2px solid" : "red  2px solid"
       };
     
     return (

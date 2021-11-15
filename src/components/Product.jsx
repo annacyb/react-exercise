@@ -1,14 +1,10 @@
 export default function Product(props) {
     // console.log(props);
-
-    const styles = {
-        // if true then green if false red
-        // backgroundColor: props.soldOut ? "green" : "red",
-        border: props.soldOut ? "green 2px solid" : "red  2px solid"
-      };
     
     return (
-        <article className="Product" style={styles}>
+        <article className="Product" style={{
+            border: props.soldOut ? "green 2px solid" : "red  2px solid"
+        }}>
             <h2>{props.productdisplayname}</h2>
             <p>ID: {props.id}</p>
             <p>Price: {props.price}</p>

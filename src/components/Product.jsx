@@ -25,14 +25,17 @@ export default function Product(props) {
 
     return (
         <article className="Product" style={{
-            border: props.soldOut ? "green 2px solid" : "red  2px solid"
+            border: props.soldout ? "green 2px solid" : "red  2px solid",
+            opacity: props.soldout ? "100%" : "50%"
         }}>
             <h2>{props.productdisplayname}</h2>
-            {/* <p>ID: {props.id}</p>
-            <p>Price: {props.price}</p> */}
-            <button onClick={addValue}> + </button>
-            <p>{stateVariable}</p>
-            <button onClick={removeValue}> - </button>
+            <p>ID: {props.id}</p>
+            <p>{props.price}$</p>
+            <div className="addOrRemoveItem">
+                <button onClick={addValue}> + </button>
+                <p>{stateVariable}</p>
+                <button onClick={removeValue}> - </button>
+            </div>
 
         </article>
         

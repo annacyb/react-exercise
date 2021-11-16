@@ -1,8 +1,18 @@
+import { useState } from "react";
+
 export default function Product(props) {
-    // console.log(props);
-    function handleClick() {
-        console.log(props.id);
+
+    const initial = 0;
+    const [stateVariable, updateFunction] = useState(initial)
+    function addValue() {
+        //set state to be equal to it's current value + 1
+        updateFunction((prevCount) => prevCount + 1);
     }
+    function removeValue() {
+        //set state to be equal to it's current value - 1
+        updateFunction((prevCount) => prevCount - 1);
+    }
+    
 
     return (
         <article className="Product" style={{
@@ -11,7 +21,10 @@ export default function Product(props) {
             <h2>{props.productdisplayname}</h2>
             <p>ID: {props.id}</p>
             <p>Price: {props.price}</p>
-            <button onClick={handleClick}>Click me</button>
+            <button onClick={addValue}>+</button>
+            <p>{stateVariable}</p>
+            <button onClick={removeValue}>-</button>
+
         </article>
         
     );

@@ -8,9 +8,17 @@ export default function Product(props) {
         //set state to be equal to it's current value + 1
         updateFunction((prevCount) => prevCount + 1);
     }
+
     function removeValue() {
         //set state to be equal to it's current value - 1
-        updateFunction((prevCount) => prevCount - 1);
+        updateFunction((prevCount) => {
+            if (prevCount > 0) {
+                return prevCount - 1;
+            }
+            else {
+                return 0;
+            }
+        })
     }
     
 
@@ -21,9 +29,9 @@ export default function Product(props) {
             <h2>{props.productdisplayname}</h2>
             <p>ID: {props.id}</p>
             <p>Price: {props.price}</p>
-            <button onClick={addValue}>+</button>
+            <button onClick={addValue}> + </button>
             <p>{stateVariable}</p>
-            <button onClick={removeValue}>-</button>
+            <button onClick={removeValue}> - </button>
 
         </article>
         

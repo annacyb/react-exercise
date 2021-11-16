@@ -4,6 +4,7 @@ export default function Product(props) {
 
     const initial = 0;
     const [stateVariable, updateFunction] = useState(initial)
+
     function addValue() {
         //set state to be equal to it's current value + 1
         updateFunction((prevCount) => prevCount + 1);
@@ -27,8 +28,8 @@ export default function Product(props) {
             border: props.soldOut ? "green 2px solid" : "red  2px solid"
         }}>
             <h2>{props.productdisplayname}</h2>
-            <p>ID: {props.id}</p>
-            <p>Price: {props.price}</p>
+            {/* <p>ID: {props.id}</p>
+            <p>Price: {props.price}</p> */}
             <button onClick={addValue}> + </button>
             <p>{stateVariable}</p>
             <button onClick={removeValue}> - </button>

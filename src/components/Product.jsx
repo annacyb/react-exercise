@@ -32,9 +32,9 @@ export default function Product(props) {
             <p>ID: {props.id}</p>
             <p>{props.price}$</p>
             <div className="addOrRemoveItem">
-                <button onClick={addValue}> + </button>
-                <p>{stateVariable}</p>
                 <button onClick={removeValue}> - </button>
+                <p>{stateVariable}</p>
+                <button onClick={addValue}> + </button>  
             </div>
 
         </article>
